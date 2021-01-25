@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Yantramanav:wght@900&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  
+}
+/* Master Page Div */
+.master-grid {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "nav profile-pic"
+    "page-content sidebar";
+  height: 100vh;
+}
+/* Top bar */
+.top-bar {
+  grid-area: nav;
+  font-family: "Yantramanav", sans-serif;
+  font-size: 4vw;
+  font-weight: bolder;
+  padding: 30px;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+  z-index: 2;
+  
+}
+.top-bar > div {
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
+
+/* Profile picture section */
+.profile-pic {
+  grid-area: profile-pic;
+  
+  z-index: 4;
+}
+.profile-pic > img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 12px 0px 12px 12px;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+}
+
+/* Page main content section */
+
+.page-content {
+  grid-area: page-content;
+margin-left: auto;
+margin-right: auto;
+  height: 100%;
+  width: 80%;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden; 
+}
+
+/* Hide or display (for each nav bar item) */
+
+.page-content-about{
+  display: block;
+}
+.page-content-skills{
+  display: none ;
+}
+.page-content-edu{
+  display: none;
+}
+.page-content-exp{
+  display: none;
+}
+.page-content-achi{
+  display: none;
+}
+/* Wrapper and associated divs (for each nav bar item) */
+
+/* Skills - nav bar item */
+.page-content-skills-wrapper {
+    height: 88%;
+  width: 88%;
+  position: absolute;
+  top:6%;
+  right:6%;
+  background-color: rgb(235, 235, 235);
+  border-radius: 12px;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%; 
+}
+.page-content-skills-wrapper > div{
+  margin: auto;
+  padding: auto;
+}
+
+.page-content-skills-wrapper > div > img{
+  -webkit-filter: drop-shadow(-9px 12px 7px rgba(0,0,0,0.5)); 
+  filter: drop-shadow(-9px 12px 7px rgba(0,0,0,0.5));
+}
+
+/* About - nav bar item */
+.page-content-about-wrapper {
+  
+  height: 88%;
+  width: 88%;
+  position: absolute;
+  top:6%;
+  right:6%;
+  background-color: rgb(235, 235, 235);
+  border-radius: 12px;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+}
+.page-content-about-wrapper > div{
+  margin: 20% 20%;
+  padding: auto;
+  text-align: center;
+
+}
+
+/* Education - nav bar item */
+
+.page-content-edu-wrapper {
+  height: 88%;
+width: 88%;
+position: absolute;
+top:6%;
+right:6%;
+background-color: rgb(235, 235, 235);
+border-radius: 12px;
+box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 50% 50%; 
+}
+.page-content-edu-wrapper > div{
+margin: auto;
+padding: auto;
+}
+
+/* Experience - nav bar item */
+
+.page-content-exp-wrapper {
+  height: 88%;
+width: 88%;
+position: absolute;
+top:6%;
+right:6%;
+background-color: rgb(235, 235, 235);
+border-radius: 12px;
+box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 50% 50%; 
+}
+.page-content-exp-wrapper > div{
+margin: auto;
+padding: auto;
+}
+
+/* Achievements - nav bar item */
+
+.page-content-achi-wrapper {
+  height: 88%;
+width: 88%;
+position: absolute;
+top:6%;
+right:6%;
+background-color: rgb(235, 235, 235);
+border-radius: 12px;
+box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 50% 50%; 
+}
+.page-content-achi-wrapper > div{
+margin: auto;
+padding: auto;
+}
+
+
+/* nav bar */
+.navbar {
+  font-family: "Nunito Sans", sans-serif;
+  padding-top: 65px;
+  font-size: 13px;
+  font-weight: 600;
+  position: relative;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23);
+  z-index: 2;
+}
+
+.navbar-tab {
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navbar-tab div {
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 1px solid rgb(78, 78, 78);
+}
+
+.navbar-tab:hover {
+  background-color: #c9c9c9;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23) inset ;
+}
+
+.nav-active {
+  background-color: #c9c9c9;
+  box-shadow: -9px 12px 8px 0px rgba(0, 0, 0, 0.23) inset ;
+}
+

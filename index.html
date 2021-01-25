@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="master-grid">
+
+        <div class="top-bar">
+            <div>DharaniDharan Mani</div>
+            <div><a href="https://www.linkedin.com/in/iamdharanidharan/" target="_blank"><i
+                        class="fa fa-linkedin-square" style="font-size:36px;color:#1976d2"></i></a></div>
+        </div>
+
+        <div class="profile-pic">
+            <img src="images/profile.jpg">
+        </div>
+
+        <div class="page-content">
+            <!---   pagecontent start div-->
+
+
+            <div class="page-content-about" id="pageContent0">
+                <div class="page-content-about-wrapper">
+                    
+                    <div>
+                        <h1>{About Me}</h1>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam assumenda illo porro eius
+                        fuga
+                        mollitia veniam at, nisi labore ad dicta quisquam veritatis facere expedita dolore ipsum.
+                        Architecto, est. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero asperiores
+                        doloremque laudantium quae aut cupiditate magni? Quas laboriosam reprehenderit, assumenda 
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-content-skills" id="pageContent1">
+                <div class="page-content-skills-wrapper" >
+                    <div><img src="images/icons/c.png" style="width: 128px;height: 128px;"></div>
+                    <div><img src="images/icons/csharp.png" style="width: 128px;height: 128px;"></div>
+                    <div><img src="images/icons/html.webp" style="width: 128px;height: 128px;"></div>
+                    <div><img src="images/icons/javascript.png" style="width: 128px;height: 128px;"></div>
+                    <div><img src="images/icons/react.png" style="width: 128px;height: 128px;"></div>
+                    <div><img src="images/icons/node.png" style="width: 128px;height: 128px;"></div>
+                </div>
+            </div>
+
+            <div class="page-content-edu" id="pageContent2">
+                <div class="page-content-edu-wrapper">
+                    <div>navarasam matric hr</div>
+                    <div>sdvdsf</div>
+                    <div>nandha college of tech</div>
+                    <div>786</div>
+                    <div>navarasam</div>
+                    <div>78</div>
+                </div>
+            </div>
+
+
+            <div class="page-content-exp" id="pageContent3">
+                <div class="page-content-exp-wrapper">
+                    <div>nutz</div>
+                    <div>nandha engineering</div>
+                    <div>syncfusion</div>
+                    <div>nutz</div>
+                </div>
+            </div>
+
+            <div class="page-content-achi" id="pageContent4">
+                <div class="page-content-achi-wrapper">
+                    <div>Paper presentation</div>
+                    <div>Coding comp</div>
+                    <div>Internship</div>
+                </div>
+            </div>
+
+
+            <!---   pagecontent end div-->
+        </div>
+        <div class="navbar">
+            <div class="navbar-tab nav-active">About<div></div>
+            </div>
+            <div class="navbar-tab">Skills <div></div>
+            </div>
+            <div class="navbar-tab">Education <div></div>
+            </div>
+            <div class="navbar-tab">Experience <div></div>
+            </div>
+            <div class="navbar-tab">Achievements <div></div>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+var navItems = document.querySelectorAll('.navbar-tab');
+
+for(let i=0;i<navItems.length;i++){
+    navItems[i].addEventListener('click', event => {
+       clearNavActive(navItems);
+       document.getElementById('pageContent'+i).style.display = "block";
+        setDisplayNone(i,navItems.length);
+        navItems[i].classList.add('nav-active');
+    })    
+}
+function setDisplayNone (current , length){
+    for(j=0;j<length;j++){
+        if(j==current) continue;
+        document.getElementById('pageContent'+j).style.display = "none";
+    }
+}
+function clearNavActive (allNavItems){
+    for(i=0;i<allNavItems.length;i++){
+        if(allNavItems[i].classList.contains('nav-active'))
+            allNavItems[i].classList.remove('nav-active');
+    }
+}
+</script>
+
+
+</body>
+
+</html>
